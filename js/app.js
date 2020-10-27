@@ -1,18 +1,18 @@
 'use strict';
 
 var userName =prompt('What is your name good fellow? :)');// this will keep track of the users name
-console.log('this is the users name '+userName);
+//console.log('this is the users name '+userName);
 
 var userScore= 0;// this is will keep of a score for the end of the question game
-console.log(userScore);
+//console.log(userScore);
 
 document.getElementById('userNameGoesHere').innerHTML = userName;
 
 alert('You will now be asked a series of questions, four to be exact. Please answered with Yes/No or Y/N. Any other will count your response as wrong!');
 
 var userQuestion1 = prompt('Is 2+2=4?');
-console.log('this is the users answer for question 1 '+ userQuestion1);
-
+//console.log('this is the users answer for question 1 '+ userQuestion1);
+//So these if statement are the questions with the last if being a pop up telling the user their score
 if(userQuestion1.toLocaleLowerCase() === 'yes'|| userQuestion1.toLocaleLowerCase()=== 'y') {
   alert('Correct!');
   userScore= userScore+1;
@@ -26,7 +26,7 @@ console.log(userScore);
 
 
 var userQuestion2 = prompt('Is 8x10=21?');
-console.log('this is the users answer for question 2 '+ userQuestion2);
+//console.log('this is the users answer for question 2 '+ userQuestion2);
 
 if(userQuestion2.toLocaleLowerCase() === 'yes'|| userQuestion2.toLocaleLowerCase()=== 'y') {
   alert('You answered wrong dummy!');
@@ -37,10 +37,10 @@ if(userQuestion2.toLocaleLowerCase() === 'yes'|| userQuestion2.toLocaleLowerCase
   alert('Please type a correct response');
 }
 
-console.log(userScore);
+//console.log(userScore);
 
 var userQuestion3 = prompt('Is 500/10=40?');
-console.log('this is the users answer for question 3 '+ userQuestion3);
+//console.log('this is the users answer for question 3 '+ userQuestion3);
 
 if(userQuestion3.toLocaleLowerCase() === 'yes'|| userQuestion3.toLocaleLowerCase()=== 'y') {
   alert('You answered wrong dummy!');
@@ -51,10 +51,10 @@ if(userQuestion3.toLocaleLowerCase() === 'yes'|| userQuestion3.toLocaleLowerCase
   alert('Please type a correct response');
 }
 
-console.log(userScore);
+//console.log(userScore);
 
 var userQuestion4 = prompt('Is 200x10-5+40/10=1994?');
-console.log('this is the users answer for question 4 '+ userQuestion4);
+//console.log('this is the users answer for question 4 '+ userQuestion4);
 
 if(userQuestion4.toLocaleLowerCase() === 'yes'|| userQuestion4.toLocaleLowerCase()=== 'y') {
   alert('Correct!');
