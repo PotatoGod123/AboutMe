@@ -79,6 +79,54 @@ if (userScore === 0) {
   alert('WOW you got all of them RIGHT! I AM SO PROUD! AMAZING! '+userScore+' out of 4' );
 }
 
+// this will ask user for a right input with limited amount of tries
+var userGuessNumber =prompt('Guess a number between 1-20, you\'ll have 4 chances with this being your first :)');
+console.log(userGuessNumber);
+var attemptTries;
+console.log(attemptTries);
 
 
+for(attemptTries = 0;attemptTries<4;attemptTries++){
+  if(attemptTries===3){
+    userGuessNumber = prompt('Last chance! tip: it\'s between 9 and 12 hehe');
+    if(userGuessNumber==='11'){
+      alert('Wow you guessed it! Nice job!');
+      userScore= userScore+1;
+      break;
+    }else{
+      alert('You failed all guesses,it was 11. oh well');
+      break;
+    }
+  }
+  if(userGuessNumber === '11'){
+    alert('Wow you guessed it. Nice job!');
+    userScore= userScore+1;
+    break;
+  }else if(userGuessNumber<'11'){
+    userGuessNumber= prompt('Wrong Answer! A bit low try, again! Guess a number between 1-20');
+  } else if(userGuessNumber>'11'){
+    userGuessNumber= prompt('Wrong answer! A bit high, try again.Guess a number between 1-20');
+  }else{
+    userGuessNumber=prompt('Hey please put a correct choice, a number between 1-20! this counts as wrong. Try again.Guess a number between 1-20');
 
+  }
+
+
+}
+
+console.log(userScore);
+// this will ask user for an input trying to guess my name
+var guessMyFullName = ['cristian','andres','robles'];
+var userGuessName = prompt('Guess a part of my name! You can put in my first/middle/last name. You\'ll only have 6 Chances!');
+
+for(var i=1;i<7;i++){
+  if(guessMyFullName.indexOf('cristian','andres','robles') === userGuessName.toLocaleLowerCase) {
+    alert('Wow! nice job, my full name is Cristian Andres Robles!');
+    userScore= userScore+1;
+    break;
+  } else {
+    userGuessName =prompt('Wrong answer, no worries try again! '+i+' attempt!');
+  }
+}
+
+console.log(userScore);
