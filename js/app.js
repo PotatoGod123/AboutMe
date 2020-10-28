@@ -12,7 +12,7 @@ alert('You will now be asked a series of questions, four to be exact. Please ans
 
 var userQuestion1 = prompt('Is 2+2=4?');
 //console.log('this is the users answer for question 1 '+ userQuestion1);
-//So these if statement are the questions with the last if being a pop up telling the user their score
+//So these if statements are the questions with the last if being a pop up telling the user their score
 if(userQuestion1.toLocaleLowerCase() === 'yes'|| userQuestion1.toLocaleLowerCase()=== 'y') {
   alert('Correct!');
   userScore= userScore+1;
@@ -22,8 +22,9 @@ if(userQuestion1.toLocaleLowerCase() === 'yes'|| userQuestion1.toLocaleLowerCase
   alert('Please type a correct response');
 }
 
-console.log(userScore);
+//console.log(userScore);
 
+//If you use an \ it will tell javascript you want use whatever character after, ex: \' will show the apostephre instead of ending a string
 
 var userQuestion2 = prompt('Is 8x10=21?');
 //console.log('this is the users answer for question 2 '+ userQuestion2);
