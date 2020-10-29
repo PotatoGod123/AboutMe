@@ -56,7 +56,7 @@ if(userQuestion3.toLocaleLowerCase() === 'yes'|| userQuestion3.toLocaleLowerCase
 
 var userQuestion4 = prompt('Is 200x10-5+40/10=1994?');
 //console.log('this is the users answer for question 4 '+ userQuestion4);
-
+// this is the forth and final question for math games
 if(userQuestion4.toLocaleLowerCase() === 'yes'|| userQuestion4.toLocaleLowerCase()=== 'y') {
   alert('Correct!');
   userScore= userScore+1;
@@ -83,7 +83,7 @@ if (userScore === 0) {
 var userGuessNumber =prompt('Guess a number between 1-20, you\'ll have 4 chances with this being your first :)');
 console.log(userGuessNumber);
 var attemptTries;
-console.log(attemptTries);
+//console.log(attemptTries);
 
 
 for(attemptTries = 0;attemptTries<4;attemptTries++){
@@ -114,7 +114,7 @@ for(attemptTries = 0;attemptTries<4;attemptTries++){
 
 }
 
-console.log(userScore);
+//console.log(userScore);
 // this will ask user for an input trying to guess my name
 var guessMyFullName = ['cristian','andres','robles'];
 var userGuessName = prompt('Guess a part of my name! You can put in my first/middle/last name. You\'ll only have 6 Chances!');
@@ -127,6 +127,7 @@ for(var i=1;i<7;i++){
       alert('u did it ');
       i=7;
       guessRight= true;
+      userScore=+1;
       break;
     }
 
@@ -137,4 +138,6 @@ for(var i=1;i<7;i++){
   }
 }
 
-console.log(userScore);
+//console.log(userScore);
+//this will shows the users final score from all past scripts
+alert('Your final score is ' +userScore+' nice?');
