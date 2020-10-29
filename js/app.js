@@ -80,16 +80,21 @@ if (userScore === 0) {
 }
 
 // this will ask user for a right input with limited amount of tries an
+
 var userGuessNumber =prompt('Guess a number between 1-20, you\'ll have 4 chances with this being your first :)');
 console.log(userGuessNumber);
 var attemptTries;
 //console.log(attemptTries);
+// using parseInt() will turn whatever into a number or using Number()
 
+//console.log('is this a number? ', typeof userGuessedThisNumber);
 
 for(attemptTries = 0;attemptTries<4;attemptTries++){
+  var userGuessedThisNumber = parseInt(userGuessNumber);
   if(attemptTries===3){
     userGuessNumber = prompt('Last chance! tip: it\'s between 9 and 12 hehe');
-    if(userGuessNumber==='11'){
+    userGuessedThisNumber= parseInt(userGuessNumber);
+    if(userGuessedThisNumber=== 11){
       alert('Wow you guessed it! Nice job!');
       userScore= userScore+1;
       break;
@@ -98,13 +103,13 @@ for(attemptTries = 0;attemptTries<4;attemptTries++){
       break;
     }
   }
-  if(userGuessNumber === '11'){
+  if(userGuessedThisNumber === 11){
     alert('Wow you guessed it. Nice job!');
     userScore= userScore+1;
     break;
-  }else if(userGuessNumber<'11'){
+  }else if(userGuessedThisNumber< 11){
     userGuessNumber= prompt('Wrong Answer! A bit low try, again! Guess a number between 1-20');
-  } else if(userGuessNumber>'11'){
+  } else if(userGuessedThisNumber> 11){
     userGuessNumber= prompt('Wrong answer! A bit high, try again.Guess a number between 1-20');
   }else{
     userGuessNumber=prompt('Hey please put a correct choice, a number between 1-20! this counts as wrong. Try again.Guess a number between 1-20');
@@ -121,18 +126,23 @@ var userGuessName = prompt('Guess a part of my name! You can put in my first/mid
 // this shit won't work, when i put in the input into the promt it does not recognize the right answer
 var guessRight = false;
 //FINALLY FUCKING i forgot toLowerCase() is a method and needs a dam () too call it 
+
+// outer loop is tracking guesses
 for(var i=1;i<7;i++){
+  // this loop will pull all the indexs from the arrays guessMyFullName and will compare to userGuessName
   for(var j=0;j<4;j++){
+    //this is the statement comparing the input and the index from the array
     if(userGuessName.toLowerCase() === guessMyFullName[j]){
       alert('u did it ');
-      i=7;
+      i=7;// this will get you out of outer loop
       guessRight= true;
-      userScore=+1;
-      break;
+      userScore++;
+      break;//take us out of inner foor loop
     }
 
   }
-  if(guessRight===false){
+  // if stament always check if the stament is true, the ! tell what it is that it's not true
+  if(!guessRight){
     alert('Wrong');
     userGuessName =prompt('Try Again!');
   }
