@@ -79,7 +79,7 @@ if (userScore === 0) {
   alert('WOW you got all of them RIGHT! I AM SO PROUD! AMAZING! '+userScore+' out of 4' );
 }
 
-// this will ask user for a right input with limited amount of tries
+// this will ask user for a right input with limited amount of tries an
 var userGuessNumber =prompt('Guess a number between 1-20, you\'ll have 4 chances with this being your first :)');
 console.log(userGuessNumber);
 var attemptTries;
@@ -118,14 +118,22 @@ console.log(userScore);
 // this will ask user for an input trying to guess my name
 var guessMyFullName = ['cristian','andres','robles'];
 var userGuessName = prompt('Guess a part of my name! You can put in my first/middle/last name. You\'ll only have 6 Chances!');
-
+// this shit won't work, when i put in the input into the promt it does not recognize the right answer
+var guessRight = false;
+//FINALLY FUCKING i forgot toLowerCase() is a method and needs a dam () too call it 
 for(var i=1;i<7;i++){
-  if(guessMyFullName.indexOf('cristian','andres','robles') === userGuessName.toLocaleLowerCase) {
-    alert('Wow! nice job, my full name is Cristian Andres Robles!');
-    userScore= userScore+1;
-    break;
-  } else {
-    userGuessName =prompt('Wrong answer, no worries try again! '+i+' attempt!');
+  for(var j=0;j<4;j++){
+    if(userGuessName.toLowerCase() === guessMyFullName[j]){
+      alert('u did it ');
+      i=7;
+      guessRight= true;
+      break;
+    }
+
+  }
+  if(guessRight===false){
+    alert('Wrong');
+    userGuessName =prompt('Try Again!');
   }
 }
 
