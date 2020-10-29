@@ -10,6 +10,8 @@ document.getElementById('userNameGoesHere').innerHTML = userName;
 
 alert('You will now be asked a series of questions, four to be exact. Please answered with Yes/No or Y/N. Any other will count your response as wrong!');
 
+function questionprompt1(){
+
 var userQuestion1 = prompt('Is 2+2=4?');
 //console.log('this is the users answer for question 1 '+ userQuestion1);
 //So these if statements are the questions with the last if being a pop up telling the user their score
@@ -21,11 +23,15 @@ if(userQuestion1.toLocaleLowerCase() === 'yes'|| userQuestion1.toLocaleLowerCase
 } else{
   alert('Please type a correct response');
 }
+}
+
+questionprompt1();
 
 //console.log(userScore);
 
 //If you use an \ it will tell javascript you want use whatever character after, ex: \' will show the apostephre instead of ending a string
 
+function promptquestion2(){
 var userQuestion2 = prompt('Is 8x10=21?');
 //console.log('this is the users answer for question 2 '+ userQuestion2);
 
@@ -37,9 +43,12 @@ if(userQuestion2.toLocaleLowerCase() === 'yes'|| userQuestion2.toLocaleLowerCase
 } else{
   alert('Please type a correct response');
 }
+}
 
+promptquestion2();
 //console.log(userScore);
 
+function promptquestion3(){
 var userQuestion3 = prompt('Is 500/10=40?');
 //console.log('this is the users answer for question 3 '+ userQuestion3);
 
@@ -51,9 +60,12 @@ if(userQuestion3.toLocaleLowerCase() === 'yes'|| userQuestion3.toLocaleLowerCase
 } else{
   alert('Please type a correct response');
 }
+}
 
+promptquestion3();
 //console.log(userScore);
 
+function promptquestion4(){
 var userQuestion4 = prompt('Is 200x10-5+40/10=1994?');
 //console.log('this is the users answer for question 4 '+ userQuestion4);
 // this is the forth and final question for math games
@@ -65,8 +77,11 @@ if(userQuestion4.toLocaleLowerCase() === 'yes'|| userQuestion4.toLocaleLowerCase
 } else{
   alert('Please type a correct response');
 }
+}
 
+promptquestion4();
 
+function getUserscore(){
 if (userScore === 0) {
   alert('Where you even trying? :( '+userScore+' out of 4');
 } else if(userScore === 1){
@@ -77,6 +92,7 @@ if (userScore === 0) {
   alert('Wow 3 of them right! good job '+userScore+' out of 4');
 }else if(userScore===4){
   alert('WOW you got all of them RIGHT! I AM SO PROUD! AMAZING! '+userScore+' out of 4' );
+}
 }
 
 // this will ask user for a right input with limited amount of tries an
@@ -150,4 +166,4 @@ for(var i=1;i<7;i++){
 
 //console.log(userScore);
 //this will shows the users final score from all past scripts
-alert('Your final score is ' +userScore+' nice?');
+getUserscore();
