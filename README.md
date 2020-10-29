@@ -18,3 +18,4 @@ Open in a browser with live-server or whatever.
 
 - Took about and hour or so to fully code, mainly just getting a feeling for at first. Pro tip, focus!!! no procastination!
   
+- I hate functions
