@@ -1,17 +1,20 @@
 'use strict';
 
 var userName =prompt('What is your name good fellow? :)');// this will keep track of the users name
+
 //console.log('this is the users name '+userName);
 
 var userScore= 0;// this is will keep of a score for the end of the question game
+
 //console.log(userScore);
 
 document.getElementById('userNameGoesHere').innerHTML = userName;
 
 alert('You will now be asked a series of questions, four to be exact. Please answered with Yes/No or Y/N. Any other will count your response as wrong!');
-// these next four functions will run a question block asking the user for a right answer
-function questionprompt1(){
 
+// these next four functions will run a question block asking the user for a right answer
+
+function questionprompt1(){
   var userQuestion1 = prompt('Is 2+2=4?');
   //console.log('this is the users answer for question 1 '+ userQuestion1);
   //So these if statements are the questions with the last if being a pop up telling the user their score

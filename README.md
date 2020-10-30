@@ -19,3 +19,5 @@ Open in a browser with live-server or whatever.
 - Took about and hour or so to fully code, mainly just getting a feeling for at first. Pro tip, focus!!! no procastination!
   
 - for loops inside for loops, so much trouble 
+
+- Collab with a fellow student, went pretty well and started building code while working with other people
