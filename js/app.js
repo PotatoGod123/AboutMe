@@ -1,12 +1,8 @@
 'use strict';
 
 var userName =prompt('What is your name good fellow? :)');// this will keep track of the users name
-
-//console.log('this is the users name '+userName);
-
 var userScore= 0;// this is will keep of a score for the end of the question game
 
-//console.log(userScore);
 
 document.getElementById('userNameGoesHere').innerHTML = userName;
 
@@ -16,7 +12,6 @@ alert('You will now be asked a series of questions, four to be exact. Please ans
 
 function questionprompt1(){
   var userQuestion1 = prompt('Is 2+2=4?');
-  //console.log('this is the users answer for question 1 '+ userQuestion1);
   //So these if statements are the questions with the last if being a pop up telling the user their score
   if(userQuestion1.toLocaleLowerCase() === 'yes'|| userQuestion1.toLocaleLowerCase()=== 'y') {
     alert('Correct!');
@@ -30,13 +25,11 @@ function questionprompt1(){
 
 questionprompt1();
 
-//console.log(userScore);
 
 //If you use an \ it will tell javascript you want use whatever character after, ex: \' will show the apostephre instead of ending a string
 
 function promptquestion2(){
   var userQuestion2 = prompt('Is 8x10=21?');
-  //console.log('this is the users answer for question 2 '+ userQuestion2);
 
   if(userQuestion2.toLocaleLowerCase() === 'yes'|| userQuestion2.toLocaleLowerCase()=== 'y') {
     alert('You answered wrong dummy!');
@@ -49,11 +42,9 @@ function promptquestion2(){
 }
 
 promptquestion2();
-//console.log(userScore);
 
 function promptquestion3(){
   var userQuestion3 = prompt('Is 500/10=40?');
-  //console.log('this is the users answer for question 3 '+ userQuestion3);
 
   if(userQuestion3.toLocaleLowerCase() === 'yes'|| userQuestion3.toLocaleLowerCase()=== 'y') {
     alert('You answered wrong dummy!');
@@ -66,11 +57,9 @@ function promptquestion3(){
 }
 
 promptquestion3();
-//console.log(userScore);
 
 function promptquestion4(){
   var userQuestion4 = prompt('Is 200x10-5+40/10=1994?');
-  //console.log('this is the users answer for question 4 '+ userQuestion4);
   // this is the forth and final question for math games
   if(userQuestion4.toLocaleLowerCase() === 'yes'|| userQuestion4.toLocaleLowerCase()=== 'y') {
     alert('Correct!');
@@ -105,12 +94,9 @@ function getUserscore(actualScore){
 // function  will run a question asking user to guess a number between 1-20
 function fullGuessNumber(){
   var userGuessNumber =prompt('Guess a number between 1-20, you\'ll have 4 chances with this being your first :)');
-  //console.log(userGuessNumber);
   var attemptTries;
-  //console.log(attemptTries);
   // using parseInt() will turn whatever into a number or using Number()
 
-  //console.log('is this a number? ', typeof userGuessedThisNumber);
 
   for(attemptTries = 0;attemptTries<4;attemptTries++){
     var userGuessedThisNumber = parseInt(userGuessNumber);
@@ -146,7 +132,6 @@ function fullGuessNumber(){
 fullGuessNumber();
 
 
-//console.log(userScore);
 // this will ask user for an input trying to guess my name
 function guessMyNameQuestion(){
   var guessMyFullName = ['cristian','andres','robles'];
@@ -178,7 +163,7 @@ function guessMyNameQuestion(){
 }
 
 guessMyNameQuestion();
-//console.log(userScore);
+
 //this will shows the users final score from all past scripts
 
 

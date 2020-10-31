@@ -1,31 +1,44 @@
 body{
-    background-color: cadetblue;
+    background-color: #272424;
     margin:0;
     height:1000px;
     width: 100%;
+    position: relative;
+    min-height: 100vh;
 }
 
 header{
     border: black solid 4px;
     color: rgb(179, 125, 45);
-    background: rgb(223, 214, 180);
+    background: #F1F3F2;
     padding: 10px 10px 10px 10px;
     text-align: center;
-    text-emphasis: bold;
     font-size: 100px;
+    box-sizing: content-box;
     width: 100%;
+    height: 12%;
 }
-
+section{
+    background: #C2D3DA;
+}
 #biographyParagraph{
     border: darkgray solid 3px;
-    background: cornflowerblue;
-    font-family: 'Henny Penny', cursive;
+    border-left-width: 3px;
+    width: 50%;
+    padding-left: 10%;
+    border-left-width: 0px;
+    margin-left: 279px;
+    padding-right: 10%;
+    margin-right: 279px;
+    height: 15%;
 }
 #biographytext{
-    color: rgb(83, 65, 124);
+    color: #585A56;
     border: black solid 2px;
     margin:20px 20px 20px 20px;
     padding: 30px;
+    position: relative;
+    text-align: center;
 }
 
 footer{ 
@@ -35,10 +48,10 @@ footer{
     text-align: center;
     font-size: 10px;
     padding: 3px 3px 3px 3px;
-    position: fixed;
-    bottom: 0px;
     width: 100%;
-    margin: auto;
+    height: 2%;
+    margin-left: .5rem;
+    margin-top: 2%;
 }
 
 #userNameGoesHere{
@@ -48,10 +61,36 @@ footer{
 
 #gamesTopTenList{    
     border: ridge 3px rosybrown;
-    background-color: grey;
+    background-color: #585A56;
     display: inline-block;
     width: auto;
-    position: fixed;
-    left: 48%;
-    top: 75%;
+    position: relative;
+    margin-left: 47%;
+    margin-top: 240px;   
+    
 }
+#workHistory{
+    border: black double solid 30px;
+    background-color: #81A3A7;
+    text-align: justify;
+    padding: 20px;
+    margin: 50px;
+}
+
+.workTitle{
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+    border: solid black;
+    border-bottom-width: 2px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+.workTime{
+    font-size:14px;
+    color: #585A56;
+}
+#workParagraph{
+    font-family: 'EB Garamond', serif;
+}
+
